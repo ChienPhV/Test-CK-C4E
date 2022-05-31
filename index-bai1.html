@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function ktsnt(n) {
+            let check = 1;
+            if (n < 2) return check = 0;
+            let i = 2;
+            while (i < n) {
+                if (n % i == 0) {
+                    check = 0;
+                    break;
+                }
+                i++;
+            }
+            return check;
+        }
+        
+        let a = prompt("nhập vào a");
+        let b = prompt("nhập vào b");
+        if(a<b){
+            for (let i = a; i < b; i++) {
+            if (ktsnt(i) == 1) {console.log(i)};
+            }
+        }else{
+            alert("phải nhập a<b, bấm F5 để thử lại")
+        }
+        
+        
+    </script>
+</body>
+
+</html>
